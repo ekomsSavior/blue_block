@@ -37,20 +37,37 @@ signups.csv
 
 ---
 
-##  Phase 1 – CIAM Log to IP Blocklist
 
-**run** `shield.py`:
+## Phase 1 – CIAM Log to IP Blocklist
+
+**Run** `shield.py`:
 
 ```bash
 python3 shield.py
-````
+```
 
-✔ Reads `signups.csv`
-✔ Flags:
-* Disposable emails 
-* Suspicious agents (Tor, curl, empty)
-* High signup velocity
-  ✔ Outputs → `akamai_blocklist.txt`
+Reads `signups.csv`
+Flags:
+
+* **Disposable emails**
+
+  * Known services (Mailinator, Sharklasers, TempMail, etc)
+  * Heuristics (numeric junk + suspicious TLDs like `.xyz`)
+
+* **Suspicious user-agents**
+
+  * Command-line tools (curl, wget, httpclient, python-requests)
+  * Privacy tools (Tor, Onion)
+  * Headless browsers and bots (Selenium, Puppeteer, Playwright, PhantomJS, HeadlessChrome)
+  * Missing user-agent string (empty)
+
+* **Signup velocity**
+
+  * 3+ signups from the same IP in under 60 seconds
+
+ Outputs → `akamai_blocklist.txt`
+
+> Detected IPs are auto-scored and blocked once their total score reaches a threshold of 7 or more.
 
 ---
 
