@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "name": "Block_Kraawn_IPs",
+      "criteria": [
+        {
+          "type": "ip",
+          "ipList": "KraawnShieldAutoBlock"
+        }
+      ],
+      "action": "deny",
+      "enabled": true
+    }
+  ]
+}
