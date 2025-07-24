@@ -1,0 +1,15 @@
+{
+  "rules": [
+    {
+      "name": "Block_Hosting_ASNs",
+      "criteria": [
+        {
+          "type": "asn",
+          "asnList": [16509, 14061, 15169, 24940, 54113]
+        }
+      ],
+      "action": "deny",
+      "enabled": true
+    }
+  ]
+}
