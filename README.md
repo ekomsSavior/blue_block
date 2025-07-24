@@ -11,7 +11,7 @@ list, scale, block
 Clone and prepare the repo:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/blue_block.git
+git clone https://github.com/ekomsSavior/blue_block.git
 cd blue_block
 ```
 
