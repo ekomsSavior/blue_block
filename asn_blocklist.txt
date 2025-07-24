@@ -1,0 +1,6 @@
+AS16509 # Amazon AWS
+AS14061 # DigitalOcean
+AS15169 # Google Cloud
+AS24940 # Hetzner Online
+AS54113 # Fastly
+AS13335 # Cloudflare (optional)
